@@ -13,11 +13,9 @@ const formSubmit = async (event) => {
   const loader = document.querySelector('.loader-container');
   const searchedQuery = event.currentTarget.elements.query.value.trim();
 
-  // Reset UI
   galleryContainer.innerHTML = '';
   loader.style.display = 'block';
 
-  // Validate input
   if (!searchedQuery) {
     loader.style.display = 'none';
     iziToast.error({
